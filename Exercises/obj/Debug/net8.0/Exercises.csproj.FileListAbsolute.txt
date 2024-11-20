@@ -1,0 +1,14 @@
+C:\Users\marce\desktop\c-sharp-exercises\Exercises\bin\Debug\net8.0\Exercises.exe
+C:\Users\marce\desktop\c-sharp-exercises\Exercises\bin\Debug\net8.0\Exercises.deps.json
+C:\Users\marce\desktop\c-sharp-exercises\Exercises\bin\Debug\net8.0\Exercises.runtimeconfig.json
+C:\Users\marce\desktop\c-sharp-exercises\Exercises\bin\Debug\net8.0\Exercises.dll
+C:\Users\marce\desktop\c-sharp-exercises\Exercises\bin\Debug\net8.0\Exercises.pdb
+C:\Users\marce\desktop\c-sharp-exercises\Exercises\obj\Debug\net8.0\Exercises.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marce\desktop\c-sharp-exercises\Exercises\obj\Debug\net8.0\Exercises.AssemblyInfoInputs.cache
+C:\Users\marce\desktop\c-sharp-exercises\Exercises\obj\Debug\net8.0\Exercises.AssemblyInfo.cs
+C:\Users\marce\desktop\c-sharp-exercises\Exercises\obj\Debug\net8.0\Exercises.csproj.CoreCompileInputs.cache
+C:\Users\marce\desktop\c-sharp-exercises\Exercises\obj\Debug\net8.0\Exercises.dll
+C:\Users\marce\desktop\c-sharp-exercises\Exercises\obj\Debug\net8.0\refint\Exercises.dll
+C:\Users\marce\desktop\c-sharp-exercises\Exercises\obj\Debug\net8.0\Exercises.pdb
+C:\Users\marce\desktop\c-sharp-exercises\Exercises\obj\Debug\net8.0\Exercises.genruntimeconfig.cache
+C:\Users\marce\desktop\c-sharp-exercises\Exercises\obj\Debug\net8.0\ref\Exercises.dll
