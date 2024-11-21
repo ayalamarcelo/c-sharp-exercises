@@ -1,93 +1,100 @@
 ﻿class Program
 {
     /*
-    Imagina que trabajas en una empresa y necesitas llevar un registro de empleados. 
-    Tienes un listado con el código de empleado (numérico), nombre, departamento 
-    (como código: 1 para ventas, 2 para marketing, 3 para finanzas, 4 para recursos humanos), 
-    edad y año de contratación.
-    Verifica que el código de departamento sea válido (debe ser entre 1 y 4).
-    Informa por cada empleado: nombre, departamento, edad y año de contratación.
-    Calcula el promedio de edad de todos los empleados e infórmalo al finalizar.
-    Calcula e informa cuántos empleados fueron contratados antes del año 2010.
-    Determina el empleado de mayor edad e informa su nombre, departamento y edad.
+    Trabajas en una ONG y necesitas registrar la información de los voluntarios. El registro incluye el 
+    código de voluntario (numérico), nombre, tipo de actividad (como código: 1 para actividades sociales, 
+    2 para actividades ambientales, 3 para actividades educativas), horas trabajadas en el último mes, y 
+    año de ingreso a la ONG.
+
+    1) Verifica que el tipo de actividad sea válido (1, 2 o 3).
+    2) Informa por cada voluntario: nombre, tipo de actividad, horas trabajadas y año de ingreso.
+    3) Calcula el total de horas trabajadas por todos los voluntarios e infórmalo al finalizar.
+    4) Informa cuántos voluntarios ingresaron antes del año 2017.
+    5) Determina el voluntario con más horas trabajadas y muestra su nombre, tipo de actividad y 
+    cantidad de horas.
     */
 
     public static void Main(string[] args)
     {
-        int departamento = 0;
-        int edad = 0;
-        int cantidad = 0;
-        int edadTotal = 0;
-        int promedio = 0;
-        int anioContratacion = 0;
-        int contratoAnterior = 0;
-        int empleadoMayorEdad = 0;
-        int deptoEmpleadoMayorEdad = 0;
+        int codigoVoluntario = 0;
+        int cantidadVoluntarios = 0;
+        int actividad = 0;
+        int horasTrabajadas = 0;
+        int totalHoras = 0;
+        int anioIngreso = 0;
+        int anioIngreso2017 = 0;
 
-        string nombre = " ";
-        string nombreEmpleadoMayorEdad = " ";
-        bool continuar = false;
+        int voluntarioHoras = 0;
+        string voluntarioNombre = " ";
+        int voluntarioActividad = 0;
+
+        string nombre = "";
+        bool continuar = true;
 
         do
         {
-            Console.WriteLine("Ingrese su código de empleado (0 para salir)");
-            int codigo = int.Parse(Console.ReadLine());
-            if (codigo != 0)
+            Console.WriteLine("Ingrese su nombre o (* para salir)\n");
+            nombre = Console.ReadLine();
+            if (nombre.ToLower().Equals("*"))
             {
-                continuar = true;
-            }
-            else
-            {
-                Console.WriteLine("Estás saliendo...");
+                Console.WriteLine("Adios...!");
                 break;
             }
 
+            Console.WriteLine("Ingrese su código de voluntario");
+            codigoVoluntario = int.Parse(Console.ReadLine());
+            cantidadVoluntarios++;
 
-            Console.WriteLine("Ingrese su nombre: ");
-            nombre = Console.ReadLine();
+            Console.WriteLine("Ingrese tipo de actividad que realiza como voluntario\n");
+            actividad = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Ingrese el código de su departamento: ");
-            departamento = int.Parse(Console.ReadLine());
-
-            //Validación de código de departamento
-
-            while(departamento < 1 || departamento > 4){
-                Console.WriteLine("Ingrese un código válido");
-                departamento = int.Parse(Console.ReadLine());
+            while (actividad < 1 || actividad > 3)
+            {
+                switch (actividad)
+                {
+                    case 1:
+                        Console.WriteLine("1. Actividades Sociales");
+                        break;
+                    case 2:
+                        Console.WriteLine("2. Actividades Ambientales");
+                        break;
+                    case 3:
+                        Console.WriteLine("3. Actividades Educativas");
+                        break;
+                    case 0:
+                    default:
+                        Console.WriteLine("Ingrese tipo de actividad que realiza como voluntario");
+                        actividad = int.Parse(Console.ReadLine());
+                        break;
+                }
             }
 
-            Console.WriteLine("Ingrese su edad: ");
-            edad = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese la cantidad de horas trabajadas durante el mes");
+            horasTrabajadas = int.Parse(Console.ReadLine());
 
-            if(edad > 0){
-                edadTotal += edad;
-                cantidad++;
+            Console.WriteLine("Ingrese año de ingreso como voluntario");
+            anioIngreso = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Datos del voluntario: Nombre: {nombre}, Tipo de actividad que realiza: {actividad}, Horas trabajadas: {horasTrabajadas}, Año de ingreso: {anioIngreso}");
+
+            if (horasTrabajadas > totalHoras)
+            {
+                totalHoras += horasTrabajadas;
             }
 
-            Console.WriteLine("Ingrese su año de contratación: ");
-            anioContratacion = int.Parse(Console.ReadLine());
-
-            Console.WriteLine($"::: Datos del empleado: Nombre: {nombre}, Departamento: {departamento}, Edad: {edad}, Año de Contratación: {anioContratacion} :::");
-        
-            if(anioContratacion < 2010) {
-              contratoAnterior++;
+            if(anioIngreso < 2017){
+                anioIngreso2017++;
             }
 
-            // Empleado de mayor edad
-            if(edad > empleadoMayorEdad){
-                nombreEmpleadoMayorEdad = nombre;
-                empleadoMayorEdad = edad;
-                deptoEmpleadoMayorEdad = departamento;
+            if(horasTrabajadas > voluntarioHoras) {
+                voluntarioHoras = horasTrabajadas;
+                voluntarioNombre = nombre;
+                voluntarioActividad = actividad;
             }
-
-            // Promedio
-            promedio = edadTotal / cantidad;
-
 
         } while (continuar);
 
-        Console.WriteLine($"Datos del empleado de mayor edad: Nombre: {nombreEmpleadoMayorEdad}, Edad: {empleadoMayorEdad}, Departamento: {deptoEmpleadoMayorEdad}");
-        Console.WriteLine($"Cantidad de empleados contratados antes del 2010: {contratoAnterior}");
-        Console.WriteLine($"El promedio de edad de todos los empleaodos es {promedio}");
+        Console.WriteLine($"Datos del voluntario con más horas trabajadas: Nombre: {voluntarioNombre}, Tipo Actividad: {voluntarioActividad}, Horas: {voluntarioHoras}");
+        Console.WriteLine($"Cantidad de horas trabajadas por todos los voluntarios: {totalHoras}");
     }
 }

@@ -12,3 +12,4 @@ C:\Users\marce\desktop\c-sharp-exercises\Exercises\obj\Debug\net8.0\refint\Exerc
 C:\Users\marce\desktop\c-sharp-exercises\Exercises\obj\Debug\net8.0\Exercises.pdb
 C:\Users\marce\desktop\c-sharp-exercises\Exercises\obj\Debug\net8.0\Exercises.genruntimeconfig.cache
 C:\Users\marce\desktop\c-sharp-exercises\Exercises\obj\Debug\net8.0\ref\Exercises.dll
+C:\Users\marce\Desktop\c-sharp-exercises\Exercises\obj\Debug\net8.0\Exercises.sourcelink.json
