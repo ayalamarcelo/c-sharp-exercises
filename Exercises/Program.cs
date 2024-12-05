@@ -34,9 +34,10 @@ class Program
         persona.diaDeNacimiento.anio = 1998;
         persona.nota = 7;
 
-        // Infrome
+        // Informe
         Console.WriteLine("{0} nació el dia {1}", persona.nombre, persona.diaDeNacimiento.dia);
-
+        Console.WriteLine("En el mes {0}", persona.diaDeNacimiento.mes);
+        Console.WriteLine("En el anio {0}", persona.diaDeNacimiento.anio);
 
     }
 
